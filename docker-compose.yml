@@ -2,7 +2,9 @@
 version: "2.1"
 services:
   smokeping-speedtest:
-    image: jwigley/smokeping-speedtest
+    build:
+        dockerfile: Dockerfile
+    image: smokeping-speedtest:local
     container_name: smokeping-speedtest
     environment:
       - PUID=1000
