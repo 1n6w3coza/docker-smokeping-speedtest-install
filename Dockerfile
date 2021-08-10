@@ -9,5 +9,5 @@ RUN apk add python3 --no-cache \
     && curl -L -s -S -o /usr/share/perl5/vendor_perl/Smokeping/probes/speedtest.pm https://github.com/mad-ady/smokeping-speedtest/raw/master/speedtest$ \
     && curl -L -s -S -o /usr/local/bin/speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py \
     && chmod a+x /usr/local/bin/speedtest-cli \
-    && cat /speedtest-conf/Probes >> /defaults/smoke-conf/Probes \
-    && cat /speedtest-conf/Targets >> /defaults/smoke-conf/Targets
+    && cat /speedtest-conf/Probes > /defaults/smoke-conf/Probes \
+    && cat /speedtest-conf/Targets > /defaults/smoke-conf/Targets
