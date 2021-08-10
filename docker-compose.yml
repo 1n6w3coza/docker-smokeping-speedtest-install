@@ -2,9 +2,12 @@
 version: "3"
 services:
   smokeping-speedtest:
-    image: ghcr.io/linuxserver/smokeping
+    build:
+      context: https://github.com/1n6w3coza/docker-smokeping-speedtest-install.git
+      dockerfile: Dockerfile
+    image: smokeping-speedtest:local
     container_name: smokeping-speedtest
-    environment:
+environment:
       - PUID=1000
       - PGID=1000
       - TZ=Africa/Johannesburg
