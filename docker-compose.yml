@@ -1,4 +1,3 @@
----
 version: "3"
 services:
   smokeping-speedtest:
@@ -7,7 +6,7 @@ services:
       dockerfile: Dockerfile
     image: smokeping-speedtest:local
     container_name: smokeping-speedtest
-environment:
+    environment:
       - PUID=1000
       - PGID=1000
       - TZ=Africa/Johannesburg
